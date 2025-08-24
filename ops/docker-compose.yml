@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: auth-db
+    environment:
+      POSTGRES_DB: crediya_solicitud_prestamo
+      POSTGRES_USER: dev_fjove
+      POSTGRES_PASSWORD: secret
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./scripts:/docker-entrypoint-initdb.d   # scripts de arranque (solo 1er inicio)
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+volumes:
+  pgdata:
