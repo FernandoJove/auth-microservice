@@ -1,9 +1,6 @@
 package co.com.jove.api.dto;
 
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -25,9 +22,9 @@ public record CreateUserDTO (
         @Email
         String email,
 
-        @NotBlank
         @NotNull
-        @Size(max = 8)
+        @DecimalMin(value = "0.01", inclusive = true)
+        @DecimalMax(value = "15000000", inclusive = true)
         BigDecimal salary,
 
 
