@@ -2,6 +2,10 @@ package co.com.jove.model.user;
 import lombok.*;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.util.UUID;
+
 
 @Getter
 @Setter
@@ -10,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Builder(toBuilder = true)
 public class User {
 
-    private Long idNumber;
+    private UUID id;
 
     private String name;
     private String lastname;
@@ -19,6 +23,8 @@ public class User {
     private Integer dni;
     private Integer phoneNumber;
 
-    private Integer idRole;
-    private Double salary;
+    private UUID roleId;
+    private BigDecimal salary;
+    private LocalDate createdAt;
+    private LocalDate updatedAt;
 }
