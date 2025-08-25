@@ -39,7 +39,7 @@ public class UserEntity {
     private BigDecimal salary;
 
     @Column("rol_id")
-    private UUID roleId;
+    private UUID idRole;
 
     @Column("created_at")
     private LocalDate createdAt;

@@ -23,7 +23,7 @@ public class User {
     private Integer dni;
     private Integer phoneNumber;
 
-    private UUID roleId;
+    private UUID idRole;
     private BigDecimal salary;
     private LocalDate createdAt;
     private LocalDate updatedAt;
