@@ -27,4 +27,9 @@ public class User {
     private BigDecimal salary;
     private LocalDate createdAt;
     private LocalDate updatedAt;
+
+    public User(String email) {
+        this.email = email;
+    }
+
 }

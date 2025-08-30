@@ -18,6 +18,7 @@ import java.util.UUID;
 @Table("usuario")
 public class UserEntity {
     @Id
+    @Column("id_usuario")
     private UUID id;
 
     @Column("nombre")
@@ -30,7 +31,7 @@ public class UserEntity {
     private String email;
 
     @Column("telefono")
-    private String phoneNumber;
+    private int phoneNumber;
 
     @Column("documento_identidad")
     private int dni;
@@ -38,7 +39,10 @@ public class UserEntity {
     @Column("salario_base")
     private BigDecimal salary;
 
-    @Column("rol_id")
+    @Column("birth_date")
+    private LocalDate birthDate;
+
+    @Column("id_rol")
     private UUID idRole;
 
     @Column("created_at")
